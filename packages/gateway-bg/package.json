@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "private": true,
   "scripts": {
+    "start": "npm run dev && node ./dist/index.js -p 8000",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "prettier": "prettier --config .prettierrc --write .",
