@@ -1,0 +1,8 @@
+@import "src/mixin";
+.root {
+  @include big-button;
+
+  .text {
+
+  }
+}

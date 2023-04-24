@@ -1,0 +1,5 @@
+@import "src/mixin";
+
+.switcher {
+  @include disabled-switcher
+}

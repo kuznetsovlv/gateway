@@ -1,0 +1,24 @@
+$height: 30px;
+
+.root{
+  border: solid 1px #ff69b4cc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 7px;
+  background: #ffb6c188;
+
+  .message {
+    color: #f00;
+    height: $height;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    line-height: $height;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+
+}

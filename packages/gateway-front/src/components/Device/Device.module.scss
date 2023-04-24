@@ -1,0 +1,9 @@
+@import "src/mixin";
+
+.status {
+  width: 80px;
+}
+
+.submit {
+  @include big-button;
+}
