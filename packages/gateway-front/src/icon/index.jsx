@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import CrossIcon from './CrossIcon';
 import EditIcon from './EditIcon';
+import HomeIcon from './HomeIcon';
 import MinusIcon from './MinusIcon';
 import OutIcon from './OutIcon';
 import PlusIcon from './PlusIcon';
@@ -15,6 +16,8 @@ const Icon = ({ name, ...props }) => {
       return <CrossIcon {...props} />;
     case 'edit':
       return <EditIcon {...props} />;
+    case 'home':
+      return <HomeIcon {...props} />;
     case 'minus':
       return <MinusIcon {...props} />;
     case 'out':
@@ -27,7 +30,8 @@ const Icon = ({ name, ...props }) => {
 };
 
 Icon.propTypes = {
-  name: PropTypes.oneOf(['cross', 'plus', 'minus', 'edit', 'out']).isRequired,
+  name: PropTypes.oneOf(['cross', 'plus', 'minus', 'edit', 'out', 'home'])
+    .isRequired,
   size: PropTypes.number,
   disabled: PropTypes.bool,
   type: PropTypes.oneOf(['normal', 'delete', 'submit', 'add', 'ghost'])

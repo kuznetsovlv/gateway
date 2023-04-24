@@ -10,6 +10,7 @@ const DeviceItem = ({ uid, vendor, onUnbind, onEdit, onDelete }) => (
     <Table.Cell>{uid}</Table.Cell>
     <Table.Cell>
       <Button
+        title="Edit"
         type="ghost"
         circled
         onClick={useCallback(() => onEdit({ open: true, uid }), [uid, onEdit])}
@@ -21,6 +22,7 @@ const DeviceItem = ({ uid, vendor, onUnbind, onEdit, onDelete }) => (
       <Button
         type="ghost"
         circled
+        title="Unbind"
         onClick={useCallback(
           () => onUnbind({ open: true, uid, vendor }),
           [uid, vendor, onUnbind]

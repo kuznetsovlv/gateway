@@ -29,6 +29,7 @@ CloseButton.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   link: PropTypes.string,
+  title: PropTypes.string,
   type: PropTypes.oneOf(['normal', 'delete', 'submit', 'add', 'ghost']),
   onClick: PropTypes.func
 };
@@ -37,6 +38,7 @@ CloseButton.defaultProps = {
   className: null,
   disabled: false,
   link: null,
+  title: 'Close',
   type: 'ghost',
   onClick: null
 };

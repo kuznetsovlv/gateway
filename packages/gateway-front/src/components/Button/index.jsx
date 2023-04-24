@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import styles from './Button.module.scss';
 
 const Button = memo(
-  ({ className, children, circled, disabled, link, type, onClick }) => {
+  ({ className, children, circled, disabled, link, title, type, onClick }) => {
     className = clsx(
       styles.root,
       {
@@ -32,10 +32,13 @@ const Button = memo(
       [onClick]
     );
 
+    title = disabled ? null : title;
+
     return link && !disabled ? (
       <Link
         className={clsx(styles.root, className)}
         to={link}
+        title={title}
         onClick={onClick}
       >
         {children}
@@ -45,6 +48,7 @@ const Button = memo(
         className={className}
         type={type === 'submit' ? 'submit' : 'button'}
         disabled={disabled}
+        title={title}
         onClick={handleClick}
       >
         {children}
@@ -59,6 +63,7 @@ Button.propTypes = {
   circled: PropTypes.bool,
   disabled: PropTypes.bool,
   link: PropTypes.string,
+  title: PropTypes.string,
   type: PropTypes.oneOf(['normal', 'delete', 'submit', 'add', 'ghost']),
   onClick: PropTypes.func
 };
@@ -69,6 +74,7 @@ Button.defaultProps = {
   children: null,
   disabled: false,
   link: null,
+  title: null,
   type: 'normal',
   onClick: null
 };

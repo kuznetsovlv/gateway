@@ -14,6 +14,9 @@ $line_height: $header_height - 2 * $header_padding;
   justify-content: stretch;
 
   .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: $header_height;
     padding: $header_padding;
     background: linear-gradient(130deg, #88f, #0ff5);

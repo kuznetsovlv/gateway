@@ -5,8 +5,9 @@ import Icon from 'icon';
 import Button from '../Button';
 import styles from './DeleteButton.module.scss';
 
-const DeleteButton = ({ disabled, onClick }) => (
+const DeleteButton = ({ disabled, onClick, ...props }) => (
   <Button
+    {...props}
     className={styles.root}
     circled
     disabled={disabled}
@@ -19,9 +20,10 @@ const DeleteButton = ({ disabled, onClick }) => (
 
 DeleteButton.propTypes = {
   disabled: PropTypes.bool,
+  title: PropTypes.string,
   onClick: PropTypes.func.isRequired
 };
 
-DeleteButton.defaultProps = { disabled: false };
+DeleteButton.defaultProps = { disabled: false, title: 'Delete' };
 
 export default DeleteButton;

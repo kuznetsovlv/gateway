@@ -27,6 +27,7 @@ const DeviceItem = ({
     <Table.Cell>{uid}</Table.Cell>
     <Table.Cell>
       <Button
+        title="Edit"
         type="ghost"
         circled
         disabled={editDisabled}
