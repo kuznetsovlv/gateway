@@ -25,7 +25,9 @@ const Button = memo(
       event => {
         event.preventDefault();
         event.stopPropagation();
-        onClick();
+        if (onClick) {
+          onClick();
+        }
       },
       [onClick]
     );
@@ -34,7 +36,7 @@ const Button = memo(
       <Link
         className={clsx(styles.root, className)}
         to={link}
-        onClick={handleClick}
+        onClick={onClick}
       >
         {children}
       </Link>
