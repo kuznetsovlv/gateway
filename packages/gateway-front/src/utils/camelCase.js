@@ -11,7 +11,7 @@ export const capitalizeFirstLetter = str =>
  * @param {string} world
  * @return {string}
  */
-export const toCamelCaseWorld = world =>
+export const toCamelCaseWord = world =>
   world
     .split('_')
     .map((str, i) => (i ? capitalizeFirstLetter(str) : str))
@@ -31,6 +31,6 @@ export const toCamelCaseProps = obj => {
   }
 
   return Object.fromEntries(
-    Object.entries(obj).map(([key, value]) => [toCamelCaseWorld(key), value])
+    Object.entries(obj).map(([key, value]) => [toCamelCaseWord(key), value])
   );
 };
