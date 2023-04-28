@@ -12,6 +12,7 @@ Project consists of three parts:
 * `npx lerna run start` - start project in dev mode
 * `npx lerna run build` - build project, all builds will be put into _packages/[packageName]/dist_ catalogs
 * `npx lerna publish --no-private` - publish new version of _gateway-bg-interface_.
+* `npx lerna run test` - test projects
 
 # License
 [MIT](./LICENSE 'MIT') Copyright (c) 2023 kuznetsovlv
