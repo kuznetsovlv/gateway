@@ -5,6 +5,11 @@ Back-end interface of gateway project, test task
 ## Description
 Provides interface of client-server interaction for project gateway. API described in the [openapi.yaml](./openapi.yaml) file. You can read it with [https://app.swaggerhub.com/](https://app.swaggerhub.com/).
 
+## Scripts
+* `npm install` - install dependencies
+* `npm run dev` - create dev build
+* `npm run build` - create production build
+
 ## Usage:
 ```shell
 npm install gateway-bg-interface
