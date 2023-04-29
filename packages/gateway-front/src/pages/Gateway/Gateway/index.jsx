@@ -43,6 +43,10 @@ const Gateway = observer(({ data }) => {
     setIp(data.ip);
   }, [data.name, data.ip]);
 
+  useEffect(() => {
+    data.fetchDeviceList();
+  }, [data]);
+
   const changed = data.name !== name || data.ip !== ip;
 
   return (
